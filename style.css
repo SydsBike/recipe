@@ -1,0 +1,296 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Stone-100: hsl(30, 54%, 90%);
+  --Stone-150: hsl(30, 18%, 87%);
+  --Stone-600: hsl(30, 10%, 34%);
+  --Stone-900: hsl(24, 5%, 18%);
+  --Brown-800: hsl(14, 45%, 36%);
+  --Rose-800: hsl(332, 51%, 32%);
+  --Rose-50: hsl(330, 100%, 98%);
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Young";
+  src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+/*Global Styles*/
+
+html {
+  /* Smooth scrolling for anchor links */
+  scroll-behavior: smooth;
+  /* Prevents content shifts due to scrollbar appearance */
+  scrollbar-gutter: stable;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  /* Makes media elements more manageable */
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  /* Ensures text renders optimally */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Prevents iOS text size adjust after orientation changes */
+  -webkit-text-size-adjust: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--Stone-100);
+  display: grid;
+  place-items: center;
+  font-family: "Outfit";
+  font-weight: 600;
+  color: var(--Stone-600);
+}
+
+h2 {
+  letter-spacing: 0;
+  font-size: 28px;
+  font-weight: 400;
+  font-family: "Young";
+  color: var(--Brown-800);
+  opacity: 0.9;
+}
+
+hr {
+
+  margin-bottom: 3.5%;
+  width: 90%;
+  opacity: 0.5;
+}
+/* Positioning Main Content*/
+
+.container {
+  width: 45.9375rem;
+  max-width: 100dvw;
+  margin-top: 7.5rem;
+  margin-bottom: 7.5rem;
+  background-color: var(--White);
+  border-radius: 1.25rem;
+}
+
+/*Positioning Sections in Card*/
+
+.card {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+}
+.content-section {
+  width: 89%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  max-width: 100dvw;
+  border-radius: 0.625rem;
+}
+
+/*Header Styling*/
+header {
+  margin-top: 5.5%;
+  margin-bottom: 4.6%;
+}
+header h1 {
+  margin-top: 5%;
+  margin-bottom: 2.45%;
+  font-family: "Young";
+  font-weight: 400;
+  font-size: 40px;
+  color: var(--Stone-900);
+}
+header p {
+  color: var(--Stone-600);
+  line-height: 150%;
+  opacity: 0.75;
+}
+
+/*Prep Section Styling*/
+
+.preperation {
+  height: 93%;
+  background-color: var(--Rose-50);
+  border-radius: 0.625rem;
+  margin-bottom: 4.6%;
+}
+.preperation h2 {
+  margin-top: 3.5%;
+  margin-left: 4%;
+  font-family: "Outfit";
+  color: var(--Rose-800);
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  line-height: 135%;
+  opacity: 0.95;
+}
+.preperation ul {
+  height: 100%;
+  margin-top: 2%;
+  margin-left: 8%;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--Rose-800);
+}
+.preperation ul li span {
+  letter-spacing: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--Stone-600);
+}
+.preperation ul li p {
+  letter-spacing: 0;
+  display: inline;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--Stone-600);
+  opacity: 0.8;
+}
+.preperation ul li {
+  line-height: 175%;
+  padding-bottom: 1%;
+  padding-left: 2.5%;
+}
+
+/*Ingredient Section */
+
+.ingredients {
+  margin-top: 1.5%;
+  margin-bottom: 5%;
+}
+
+.ingredients ul {
+  height: 100%;
+  margin-top: 2.8%;
+  margin-left: 3.5%;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--Rose-800);
+}
+
+.ingredients ul li p {
+  letter-spacing: 0;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--Stone-600);
+  opacity: 0.8;
+}
+.ingredients ul li {
+  line-height: 175%;
+  padding-bottom: 1.3%;
+  padding-left: 2.5%;
+}
+
+
+/*Instructions*/
+.instructions {
+  margin-bottom: 2.5%;
+}
+.instructions ol {
+  margin-left: 2.5%;
+  margin-top: 2.5%;
+  color: var(--Rose-800);
+}
+.instructions li {
+  padding-bottom: 2.5%;
+  padding-left: 2%;
+
+}
+.instructions span {
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0;
+  color: var(--Stone-900);
+  opacity: .8;
+}
+.instructions p {
+  display: inline;
+  letter-spacing: 0;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--Stone-600);
+  opacity: 0.8;
+}
+
+/*Nutrition*/
+.nutrition {
+  width: 90%;
+  margin-bottom: 5%;
+}
+.nutrition h2 {
+  margin-bottom: 3%;
+}
+
+.nutrition p {
+  margin-bottom: 2.5%;
+}
+
+
+table {
+
+  width: 100%;
+  height: 175px;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+tr{
+  width: 50%;
+  padding-left: 10px;
+}
+ .title {
+
+  padding-left: 5%;
+}
+
+.border {
+  border-bottom: 1px solid black;
+}
+
+.unit {
+  color: var(--Rose-800);
+}
+
+
+/*Mobil*/
+
+@media only screen and (max-width: 460px) {
+  .container {
+    min-width: 100dvw;
+    margin: 0;
+  }
+  .card header {
+    min-width: 100%;
+    margin: 0;
+  }
+  header h1 {
+    width: 90%;
+    margin: 5%;
+  }
+  header p {
+    width: 90%;
+    margin: 5%;
+  }
+}
