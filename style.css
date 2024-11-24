@@ -74,7 +74,7 @@ strong {
 
 .txt-preset-1 {
   color: var(--clr--Stone-900);
-  font-family: var(--ff-headings-young);
+  font-family: var(--ff-h2-young);
   font-size: 2.5rem;
   font-weight: var(--fw-regular);
   line-height: 100%;
@@ -83,7 +83,7 @@ strong {
 .txt-preset-2 {
   color: var(--clr--Brown-800);
   font-family: var(--ff-h2-young);
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   font-weight: var(--fw-semibold);
   line-height: 100%;
 }
