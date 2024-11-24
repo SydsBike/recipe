@@ -1,296 +1,219 @@
 :root {
-  --White: hsl(0, 0%, 100%);
-  --Stone-100: hsl(30, 54%, 90%);
-  --Stone-150: hsl(30, 18%, 87%);
-  --Stone-600: hsl(30, 10%, 34%);
-  --Stone-900: hsl(24, 5%, 18%);
-  --Brown-800: hsl(14, 45%, 36%);
-  --Rose-800: hsl(332, 51%, 32%);
-  --Rose-50: hsl(330, 100%, 98%);
-}
-@font-face {
-  font-family: "Outfit";
-  src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf") format("truetype");
-  font-weight: 100 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Young";
-  src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-/*Global Styles*/
+  --ff-copy-outfit: "Outfit", sans-serif;
+  --ff-h2-young: "Young Serif", serif;
 
-html {
-  /* Smooth scrolling for anchor links */
-  scroll-behavior: smooth;
-  /* Prevents content shifts due to scrollbar appearance */
-  scrollbar-gutter: stable;
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-stone-100: hsl(30, 54%, 90%);
+  --clr-stone-150: hsl(30, 18%, 87%);
+  --clr--Stone-600: hsl(30, 10%, 34%);
+  --clr--Stone-900: hsl(24, 5%, 18%);
+  --clr--Brown-800: hsl(14, 45%, 36%);
+  --clr--Rose-800: hsl(332, 51%, 32%);
+  --clr--Rose-50: hsl(330, 100%, 98%);
+
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
   font-size: 16px;
 }
+
+/* Reset */
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+* {
   margin: 0;
   padding: 0;
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-  /* Makes media elements more manageable */
-  display: block;
-  max-width: 100%;
-}
-
-body {
-  /* Ensures text renders optimally */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* Prevents iOS text size adjust after orientation changes */
-  -webkit-text-size-adjust: 100%;
-  min-height: 100vh;
-  min-height: 100dvh;
-  background-color: var(--Stone-100);
-  display: grid;
-  place-items: center;
-  font-family: "Outfit";
-  font-weight: 600;
-  color: var(--Stone-600);
-}
-
-h2 {
-  letter-spacing: 0;
-  font-size: 28px;
-  font-weight: 400;
-  font-family: "Young";
-  color: var(--Brown-800);
-  opacity: 0.9;
-}
-
-hr {
-
-  margin-bottom: 3.5%;
-  width: 90%;
-  opacity: 0.5;
-}
-/* Positioning Main Content*/
-
-.container {
-  width: 45.9375rem;
-  max-width: 100dvw;
-  margin-top: 7.5rem;
-  margin-bottom: 7.5rem;
-  background-color: var(--White);
-  border-radius: 1.25rem;
-}
-
-/*Positioning Sections in Card*/
-
-.card {
-  width: 100%;
-  display: grid;
-  justify-items: center;
-}
-.content-section {
-  width: 89%;
+  font: inherit;
 }
 
 img {
-  width: 100%;
-  height: auto;
-  max-width: 100dvw;
-  border-radius: 0.625rem;
+  display: block;
+  max-width: 100%;
+}
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+html,
+body {
+  height: 100%;
+  letter-spacing: 0;
 }
 
-/*Header Styling*/
-header {
-  margin-top: 5.5%;
-  margin-bottom: 4.6%;
+strong {
+  font-weight: var(--fw-bold);
 }
-header h1 {
-  margin-top: 5%;
-  margin-bottom: 2.45%;
-  font-family: "Young";
-  font-weight: 400;
-  font-size: 40px;
-  color: var(--Stone-900);
+
+/* utility classes */
+.bg-body {
+  background-color: var(--clr-stone-100);
 }
-header p {
-  color: var(--Stone-600);
+
+.bg-card {
+  background-color: var(--clr-white);
+}
+
+.bg-prep {
+  background-color: var(--clr--Rose-50);
+}
+
+.txt-lh-100 {
+  line-height: 100%;
+}
+
+.txt-preset-1 {
+  color: var(--clr--Stone-900);
+  font-family: var(--ff-headings-young);
+  font-size: 2.5rem;
+  font-weight: var(--fw-regular);
+  line-height: 100%;
+}
+
+.txt-preset-2 {
+  color: var(--clr--Brown-800);
+  font-family: var(--ff-h2-young);
+  font-size: 1.25rem;
+  font-weight: var(--fw-semibold);
+  line-height: 100%;
+}
+
+.txt-preset-3 {
+  color: var(--clr--Rose-800);
+  font-family: var(--ff-copy-outfit);
+  font-size: 1.25rem;
+  font-weight: var(--fw-semibold);
+  line-height: 100%;
+}
+
+.txt-preset-4 {
+  color: var(--clr--Stone-600);
+  font-family: var(--ff-copy-outfit);
+  font-size: 1rem;
+  font-weight: var(--fw-regular);
   line-height: 150%;
-  opacity: 0.75;
 }
 
-/*Prep Section Styling*/
+.txt-preset-4-bold {
+  color: var(--clr--Brown-800);
+  font-family: var(--ff-copy-outfit);
+  font-size: 1rem;
+  font-weight: var(--fw-bold);
+  line-height: 150%;
+}
+
+.line-clr {
+  border-color: var(--clr-stone-150);
+}
+
+.block-margin-100 {
+  margin-block: 1.5rem;
+}
+.block-margin-200 {
+  margin-block: 2rem;
+}
+.block-margin-300 {
+  margin-block: 2.5rem;
+}
+
+.padding-100 {
+  padding: 1.5rem;
+}
+
+/* General Layout */
+
+.primary-container {
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: clamp(23.438rem, 15.493rem + 33.897vw, 46rem);
+  border-radius: 1.5rem;
+}
+
+.container {
+  margin: clamp(2rem, 1.824rem + 0.751vw, 2.5rem);
+}
+
+.hero {
+  width: auto;
+  height: clamp(10.688rem, 7.849rem + 12.113vw, 18.75rem);
+  border-radius: 0.75rem;
+}
 
 .preperation {
-  height: 93%;
-  background-color: var(--Rose-50);
-  border-radius: 0.625rem;
-  margin-bottom: 4.6%;
-}
-.preperation h2 {
-  margin-top: 3.5%;
-  margin-left: 4%;
-  font-family: "Outfit";
-  color: var(--Rose-800);
-  font-size: 19px;
-  font-weight: 800;
-  letter-spacing: 0.3px;
-  line-height: 135%;
-  opacity: 0.95;
-}
-.preperation ul {
-  height: 100%;
-  margin-top: 2%;
-  margin-left: 8%;
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--Rose-800);
-}
-.preperation ul li span {
-  letter-spacing: 0;
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--Stone-600);
-}
-.preperation ul li p {
-  letter-spacing: 0;
-  display: inline;
-  font-weight: 600;
-  font-size: 16px;
-  color: var(--Stone-600);
-  opacity: 0.8;
-}
-.preperation ul li {
-  line-height: 175%;
-  padding-bottom: 1%;
-  padding-left: 2.5%;
+  border-radius: 0.75rem;
 }
 
-/*Ingredient Section */
-
-.ingredients {
-  margin-top: 1.5%;
-  margin-bottom: 5%;
+ul {
+  margin: 1rem;
+}
+ul li {
+  padding-left: 1rem;
 }
 
-.ingredients ul {
-  height: 100%;
-  margin-top: 2.8%;
-  margin-left: 3.5%;
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--Rose-800);
+.preperation ul li:nth-child(2) {
+  padding-block: 0.5rem;
 }
 
-.ingredients ul li p {
-  letter-spacing: 0;
-  font-weight: 600;
-  font-size: 16px;
-  color: var(--Stone-600);
-  opacity: 0.8;
-}
-.ingredients ul li {
-  line-height: 175%;
-  padding-bottom: 1.3%;
-  padding-left: 2.5%;
+ol {
+  margin: 1.5rem;
 }
 
-
-/*Instructions*/
-.instructions {
-  margin-bottom: 2.5%;
-}
-.instructions ol {
-  margin-left: 2.5%;
-  margin-top: 2.5%;
-  color: var(--Rose-800);
-}
-.instructions li {
-  padding-bottom: 2.5%;
-  padding-left: 2%;
-
-}
-.instructions span {
-  font-size: 16px;
-  font-weight: 900;
-  letter-spacing: 0;
-  color: var(--Stone-900);
-  opacity: .8;
-}
-.instructions p {
-  display: inline;
-  letter-spacing: 0;
-  font-weight: 600;
-  font-size: 16px;
-  color: var(--Stone-600);
-  opacity: 0.8;
+ol li {
+  padding-left: 1rem;
 }
 
-/*Nutrition*/
-.nutrition {
-  width: 90%;
-  margin-bottom: 5%;
-}
-.nutrition h2 {
-  margin-bottom: 3%;
-}
-
-.nutrition p {
-  margin-bottom: 2.5%;
+li::marker {
+  color: var(--clr--Brown-800);
+  font-family: var(--ff-copy-outfit);
+  font-size: 1rem;
+  font-weight: var(--fw-bold);
+  line-height: 150%;
 }
 
+ol li:not(:last-child) {
+  padding-bottom: 0.5rem;
+}
 
-table {
+.primary-header {
+  margin: clamp(0rem, -0.88rem + 3.756vw, 2.5rem);
+}
 
-  width: 100%;
-  height: 175px;
-  table-layout: fixed;
+.table-container {
+  display: grid;
   border-collapse: collapse;
+
+  grid-auto-flow: column;
 }
 
-tr{
-  width: 50%;
-  padding-left: 10px;
-}
- .title {
-
-  padding-left: 5%;
-}
-
-.border {
-  border-bottom: 1px solid black;
+.table-container tr {
+  border-bottom: 1px solid var(--clr-stone-150);
+  height: 2.5rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
 }
 
-.unit {
-  color: var(--Rose-800);
+td {
+  align-self: center;
+}
+.td-padding {
+  padding-left: 2rem;
 }
 
 
-/*Mobil*/
-
-@media only screen and (max-width: 460px) {
-  .container {
-    min-width: 100dvw;
-    margin: 0;
-  }
-  .card header {
-    min-width: 100%;
-    margin: 0;
-  }
-  header h1 {
-    width: 90%;
-    margin: 5%;
-  }
-  header p {
-    width: 90%;
-    margin: 5%;
-  }
+.no-border {
+    border: none !important;
 }
