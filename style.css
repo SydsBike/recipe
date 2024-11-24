@@ -139,6 +139,8 @@ strong {
 
 .card {
   width: clamp(23.438rem, 15.493rem + 33.897vw, 46rem);
+
+  margin-top: clamp(0rem, -2.817rem + 12.019vw, 8rem);
   border-radius: 1.5rem;
 }
 
@@ -213,7 +215,6 @@ td {
   padding-left: 2rem;
 }
 
-
 .no-border {
-    border: none !important;
+  border: none !important;
 }
